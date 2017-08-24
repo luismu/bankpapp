@@ -1,0 +1,29 @@
+%h1 
+  Account Number: #{@bank_account.account_number}
+  %small
+    #{@bank_account.client}
+
+= button_tag :new_transaction, id: "btn-new-transaction", class: "btn btn-primary" do
+  New Transaction
+
+= link_to bank_accounts_path, class: "btn btn-default" do
+  Back to Bank Accounts
+
+=render partial: "transactions", locals: {bank_account: @bank_account }
+
+=link_to edit_bank_account_path(@bank_account.id), class: "btn btn-info" do
+  Edit Bank Account
+
+=link_to bank_account_path(@bank_account.id), method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } do
+  Delete Bank Account
+
+=render partial: "modal_transaction"
+
+
+= javascript_include_tag "bank_accounts/show"
+:javascript
+  $(document).ready(function() {
+    Show.init()
+  });
+
+    
