@@ -1,27 +1,16 @@
 %h1
-  My bank
+  Welcome
 .row
-  .col-md-12
-    %h2
-      Number of accounts: #{number_of_accounts}
-    %h2
-      Number of clients: #{number_of_clients}
-
-.row
-  .col-md-12
-    =link_to new_client_path do
-      New Clients
-    %hr
-    =link_to clients_path do
-      Clients
-    %hr
-    =link_to bank_accounts_path do
-      BankAccounts
-    %hr
-    =link_to new_bank_account_path do
-      New Bank Account
-
-.row
-  .col-md-12
-  
-     
+  .col-md-6
+    .panel.panel-success
+      .panel-heading
+        Number of accounts:
+      .panel-body
+        #{number_of_accounts}
+    
+  .col-md-6
+    .panel.panel-success
+      .panel-heading
+        Number of clients:
+      .panel-body
+        #{number_of_clients}
