@@ -16,7 +16,7 @@
       %tr
         %td #{bank_account.account_number}
         %td 
-          = link_to client_path(bank_account.id) do
+          = link_to client_path(bank_account.client.id) do
             #{bank_account.client}
         %td #{number_to_currency(bank_account.balance, unit: "COP ")}
         %td
