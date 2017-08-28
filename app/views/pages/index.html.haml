@@ -1,5 +1,9 @@
 %h1
   Welcome
+- if @number_of_clients == 0
+  =link_to clients_path, class: "btn btn-primay" do
+    New Client
+
 .row
   .col-md-6
     .panel.panel-success
