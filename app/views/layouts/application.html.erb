@@ -13,30 +13,26 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "Bankpapp", root_path, class: "navbar-brand" %>
-    </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="">
-
-        <%= link_to "Clients", clients_path, class: "navbar-brand" %> 
-        </li>
-        <li>
-          <%= link_to "BankAccounts", bank_accounts_path, class: "navbar-brand" %>
-          </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <%= link_to "Bankpapp", root_path, class: "navbar-brand" %>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="">
 
-
-
+              <%= link_to "Clients", clients_path, class: "navbar-brand" %> 
+            </li>
+            <li>
+              <%= link_to "BankAccounts", bank_accounts_path, class: "navbar-brand" %>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
       </div>
+   
     </nav>
     <div class="container">
       <%= yield %>
